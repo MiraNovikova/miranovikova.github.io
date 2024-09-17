@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+.col {
+    padding: 1rem;
+    float: left;
+    width: 50%;
+}
+
+.col::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.box {
+    display: inline-block;
+    position: absolute;
+    left: 20%;
+    margin-top: 50px;
+}
+
+.text {
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.buttons {
+    float: right;
+}
+
+.btn1,
+.btn2 {
+    margin-top: 5px;
+    margin-left: 10px;
+    height: 30px;
+    width: 100px;
+    background-color: white;
+    border-color: lightsteelblue;
+}
+
+.btn1:hover,
+.btn2:hover {
+    background-color: lightsteelblue;
+    border-radius: white;
+}
+
+
+.active {
+    animation-name: circle-rotation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes circle-rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.hide {
+    visibility: hidden;
+    display: flex;
+}
+
+
+.active .hide {
+    position: absolute;
+}
+
+#progress {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-size: 100px;
+}
+
+#input {
+    width: 70px;
+    height: 50px;
+    border-color: lightsteelblue;
+    margin-left: -150px;
+    text-align: center;
+}
+
+
+@media (min-width: 540px) {
+    .col {
+        width: 100%
+    }
+}
+
+@media (min-width: 720px) {
+    .col {
+        width: 50%
+    }
+}
+
+@media (min-width: 960px) {
+    .col {
+        width: 33.3333333333%
+    }
+}
+
+@media (min-width: 1140px) {
+    .col {
+        width: 25%
+    }
+}
